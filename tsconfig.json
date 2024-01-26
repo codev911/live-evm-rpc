@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "rootDir": ".",
+		"sourceMap": true,
+		"declaration": true,
+		"declarationDir": "dist",
+		"moduleResolution": "Node",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"esModuleInterop": true,
+		"importHelpers": true,
+		"target": "ES2015",
+		"module": "ESNext",
+		"lib": ["ES2020", "dom"],
+		"skipLibCheck": true,
+		"skipDefaultLibCheck": true,
+		"baseUrl": ".",
+		"paths": {
+			"axios": ["./node_modules/axios"],
+            "tslib": ["./node_modules/tslib"]
+		},
+		"types": [
+			"node",
+			"jest",
+			"mocha"
+		]
+	},
+	"exclude": ["node_modules"],
+}

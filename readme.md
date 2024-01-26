@@ -1,5 +1,5 @@
 # live-evm-rpc
-Get Public Live EVM RPC url easil.
+Get Public Live EVM RPC url easily.
 
 ## Install
 1. Via NPM : `npm i live-evm-rpc`

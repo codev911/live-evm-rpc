@@ -2,6 +2,7 @@ import axios from 'axios';
 
 import { chainList } from './chain/list.chain';
 import { reportState } from './interface/report.interface';
+import { liveRpcOption } from './interface/liverpc.interface';
 
 const defaultTimeout: number = 1500;
 
@@ -115,11 +116,11 @@ export const testRpc = async (
 
 export const getLiveRpc = async (
 	targetChain: number,
-	timeout?: number,
-	rpcList?: string[]
+	options?: liveRpcOption
 ): Promise<reportState[]> => {
 	const getRpc = getPublicRpc(targetChain);
-	if (getRpc.length === 0 && rpcList === undefined) throw new Error('no rpc');
+	if (getRpc.length === 0 && options?.rpcs === undefined)
+		throw new Error('no rpc');
 
 	const promt = [];
 
@@ -127,17 +128,21 @@ export const getLiveRpc = async (
 		promt.push(
 			testRpc(
 				rpc,
-				timeout !== undefined && timeout !== null ? timeout : undefined
+				options?.timeout !== undefined && options?.timeout !== null
+					? options.timeout
+					: undefined
 			)
 		);
 	});
 
-	if (rpcList !== undefined && rpcList.length > 0) {
-		rpcList.forEach(rpc => {
+	if (options?.rpcs !== undefined && options?.rpcs.length > 0) {
+		options?.rpcs.forEach(rpc => {
 			promt.push(
 				testRpc(
 					rpc,
-					timeout !== undefined && timeout !== null ? timeout : undefined
+					options?.timeout !== undefined && options?.timeout !== null
+						? options.timeout
+						: undefined
 				)
 			);
 		});
@@ -156,5 +161,16 @@ export const getLiveRpc = async (
 		}
 	});
 
-	return final;
+	const sortByMs = final.sort((a: any, b: any) => a.ms - b.ms);
+	const sortByBlock = sortByMs.sort((a: any, b: any) => b.lastBlock - a.lastBlock);
+
+	return sortByBlock;
 };
+
+export const getBestLiveRpc = async (
+	targetChain: number,
+	options?: liveRpcOption
+): Promise<reportState> => {
+	const res = await getLiveRpc(targetChain, options);
+	return res[0];
+}

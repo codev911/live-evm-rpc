@@ -1,8 +1,8 @@
 {
   "name": "live-evm-rpc",
-  "description": "Get Public Stable EVM RPC url easily",
+  "description": "Get Public Live EVM RPC url easily",
   "author": "codev911",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -21,6 +21,7 @@
     "@types/jest": "^29.5.11",
     "@types/mocha": "^10.0.6",
     "@types/node": "^14",
+    "dotenv": "^16.4.1",
     "fs": "^0.0.1-security",
     "jest": "^29.7.0",
     "path": "^0.12.7",

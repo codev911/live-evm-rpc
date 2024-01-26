@@ -10,3 +10,14 @@ test('test public rpc from chain', async () => {
 		url: 'https://ethereum.publicnode.com',
 	});
 });
+
+test('test public rpc from chain with timeout', async () => {
+	const result = await testRpc('https://ethereum.publicnode.com', 3000);
+	await expect(await result).toStrictEqual({
+		isSyncing: expect.any(Boolean),
+		lastBlock: expect.any(Number) || expect.any(String),
+		chainId: expect.any(Number) || expect.any(String),
+		ms: expect.any(Number),
+		url: 'https://ethereum.publicnode.com',
+	});
+});

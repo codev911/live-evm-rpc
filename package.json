@@ -1,5 +1,5 @@
 {
-  "name": "stable-evm-rpc",
+  "name": "live-evm-rpc",
   "description": "Get Public Stable EVM RPC url easily",
   "author": "codev911",
   "version": "1.0.0",

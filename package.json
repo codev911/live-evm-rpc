@@ -2,7 +2,7 @@
   "name": "live-evm-rpc",
   "description": "Get Public Stable EVM RPC url easily",
   "author": "codev911",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "./dist/index.js",
   "exports": {
     "require": "./dist/index.cjs",
@@ -10,16 +10,15 @@
   },
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "type": "module",
   "files": [
     "dist"
   ],
   "license": "MIT",
   "scripts": {
-    "build": "rimraf dist && npm run generate:chain && npm run format && tsup",
+    "build": "rimraf dist && tsup",
     "format": "prettier --write lib/*.ts lib/**/*.ts tests/*.ts",
     "test": "jest",
-    "generate:chain": "node --loader ts-node/esm ./lib/chain/fork.chain.ts && node --loader ts-node/esm ./lib/chain/parse.chain.ts"
+    "generate:chain": "node --loader ts-node/esm ./lib/chain/fork.chain.ts && node --loader ts-node/esm ./lib/chain/parse.chain.ts && npm run format"
   },
   "devDependencies": {
     "@swc/core": "^1.3.105",

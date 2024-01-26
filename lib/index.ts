@@ -10,7 +10,6 @@ const getChainPost = async (
 	timeout?: number
 ): Promise<number | 'unknown'> => {
 	try {
-		await process.nextTick(() => {});
 		const { status, data } = await axios.post(
 			rpcUrl,
 			{ jsonrpc: '2.0', method: 'eth_chainId', params: [], id: 83 },
@@ -35,7 +34,6 @@ const getBlockPost = async (
 	timeout?: number
 ): Promise<number | 'unknown'> => {
 	try {
-		await process.nextTick(() => {});
 		const { status, data } = await axios.post(
 			rpcUrl,
 			{ jsonrpc: '2.0', method: 'eth_blockNumber', params: [], id: 83 },
@@ -60,7 +58,6 @@ const getIsSyncingPost = async (
 	timeout?: number
 ): Promise<boolean> => {
 	try {
-		await process.nextTick(() => {});
 		const { status, data } = await axios.post(
 			rpcUrl,
 			{ jsonrpc: '2.0', method: 'eth_syncing', params: [], id: 83 },

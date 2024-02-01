@@ -6,6 +6,8 @@ import { liveRpcOption } from './interface/liverpc.interface';
 
 const defaultTimeout: number = 1500;
 
+export type ReportState = reportState;
+
 const getChainPost = async (
 	rpcUrl: string,
 	timeout?: number
@@ -94,7 +96,7 @@ export const getPublicRpc = (chainId: number): string[] => {
 export const testRpc = async (
 	rpcUrl: string,
 	timeout?: number
-): Promise<reportState> => {
+): Promise<ReportState> => {
 	const getStart = new Date().getTime();
 	const aggregate = await Promise.all([
 		getChainPost(rpcUrl, timeout),
@@ -117,7 +119,7 @@ export const testRpc = async (
 export const getLiveRpc = async (
 	targetChain: number,
 	options?: liveRpcOption
-): Promise<reportState[]> => {
+): Promise<ReportState[]> => {
 	const getRpc = getPublicRpc(targetChain);
 	if (getRpc.length === 0 && options?.rpcs === undefined)
 		throw new Error('no rpc');
@@ -170,7 +172,7 @@ export const getLiveRpc = async (
 export const getBestLiveRpc = async (
 	targetChain: number,
 	options?: liveRpcOption
-): Promise<reportState> => {
+): Promise<ReportState> => {
 	const res = await getLiveRpc(targetChain, options);
 	return res[0];
 }

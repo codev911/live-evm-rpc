@@ -104,10 +104,10 @@ Get Public Live EVM RPC url easily.
     async function test(){
         console.log(await getLiveRpc(chain));
         // or you can set custom timeout will be like, default timeout is 1500ms
-        // console.log(await getLiveRpc('https://cloudflare-eth.com', {timeout: 3000}));
+        // console.log(await getLiveRpc(1, {timeout: 3000}));
         // or you can set custom rpc if you have premium rpc
         // console.log(await getLiveRpc(
-        //     'https://cloudflare-eth.com', {rpcs: ['https://ethereum.g.alchemy.com/v2/demo']}
+        //     1, {rpcs: ['https://ethereum.g.alchemy.com/v2/demo']}
         // ));
     }
     test();
@@ -148,10 +148,10 @@ Get Public Live EVM RPC url easily.
     async function test(){
         console.log(await getBestLiveRpc(chain));
         // or you can set custom timeout will be like, default timeout is 1500ms
-        // console.log(await getBestLiveRpc('https://cloudflare-eth.com', {timeout: 3000}));
+        // console.log(await getBestLiveRpc(1, {timeout: 3000}));
         // or you can set custom rpc if you have premium rpc
         // console.log(await getBestLiveRpc(
-        //     'https://cloudflare-eth.com', {rpcs: ['https://ethereum.g.alchemy.com/v2/demo']}
+        //     1, {rpcs: ['https://ethereum.g.alchemy.com/v2/demo']}
         // ));
     }
     test();

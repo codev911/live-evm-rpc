@@ -74,7 +74,11 @@ const getIsSyncingPost = async (
 			if (typeof data.result === 'boolean') {
 				return data.result;
 			} else {
-				console.log(data.result);
+				const calculate = data.result;
+				const high = parseInt(calculate.highestBlock);
+				const current = parseInt(calculate.currentBlock);
+
+				return ((high - current) > 20) ? true : false;
 			}
 		} else {
 			return true;

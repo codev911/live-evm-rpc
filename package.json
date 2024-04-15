@@ -2,7 +2,7 @@
   "name": "live-evm-rpc",
   "description": "Get Public Live EVM RPC url easily",
   "author": "codev911",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",

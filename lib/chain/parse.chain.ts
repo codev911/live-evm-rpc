@@ -37,7 +37,8 @@ async function main() {
 				rpc.includes('https://') === true &&
 				rpc.includes('${INFURA_API_KEY}') === false &&
 				rpc.includes('${API_KEY}') === false &&
-				rpc.includes('${ALCHEMY_API_KEY}') === false
+				rpc.includes('${ALCHEMY_API_KEY}') === false &&
+				rpc.includes('api_key') === false
 			) {
 				if (rpc.includes('${ANKR_API_KEY}') === true) {
 					const finalRpc = rpc.replace('${ANKR_API_KEY}', '');

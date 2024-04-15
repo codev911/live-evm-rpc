@@ -78,7 +78,7 @@ const getIsSyncingPost = async (
 				const high = parseInt(calculate.highestBlock);
 				const current = parseInt(calculate.currentBlock);
 
-				return ((high - current) > 20) ? true : false;
+				return high - current > 20 ? true : false;
 			}
 		} else {
 			return true;
@@ -168,7 +168,9 @@ export const getLiveRpc = async (
 	});
 
 	const sortByMs = final.sort((a: any, b: any) => a.ms - b.ms);
-	const sortByBlock = sortByMs.sort((a: any, b: any) => b.lastBlock - a.lastBlock);
+	const sortByBlock = sortByMs.sort(
+		(a: any, b: any) => b.lastBlock - a.lastBlock
+	);
 
 	return sortByBlock;
 };
@@ -179,4 +181,4 @@ export const getBestLiveRpc = async (
 ): Promise<ReportState> => {
 	const res = await getLiveRpc(targetChain, options);
 	return res[0];
-}
+};

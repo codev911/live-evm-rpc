@@ -6423,7 +6423,7 @@ export const chainList: chain[] = [
 		chainId: 80002,
 		name: 'Amoy',
 		urls: [
-			'https://https://rpc-amoy.polygon.technology',
+			'https://rpc-amoy.polygon.technology',
 			'https://polygon-amoy-bor-rpc.publicnode.com',
 			'https://rpc-amoy.polygon.technology',
 			'https://polygon-bor-amoy-rpc.publicnode.com',

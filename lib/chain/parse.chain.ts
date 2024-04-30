@@ -94,6 +94,12 @@ async function main() {
 		}
 	}
 
+	for (let index3 = 0; index3 < chainListDart.length; index3++) {
+		chainListDart[index3].urls.push(
+			`https://${chainListDart[index3].chainId}.rpc.thirdweb.com`
+		);
+	}
+
 	if (fs.existsSync(path.join(__dirname, 'list.chain.ts')) === false) {
 		fs.appendFileSync(
 			path.join(__dirname, 'list.chain.ts'),

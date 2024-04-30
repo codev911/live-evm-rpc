@@ -67,5 +67,6 @@ test('get all public rpc from chain', async () => {
 		'https://gateway.subquery.network/rpc/eth',
 		'https://ethereum.rpc.subquery.network/public',
 		'https://eth.llamarpc.com',
+		"https://1.rpc.thirdweb.com",
 	]);
 });

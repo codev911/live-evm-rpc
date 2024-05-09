@@ -63,10 +63,11 @@ test('get all public rpc from chain', async () => {
 		'https://public.stackup.sh/api/v1/node/ethereum-mainnet',
 		'https://eth1.lava.build/lava-referer-ed07f753-8c19-4309-b632-5a4a421aa589/',
 		'https://eth1.lava.build/lava-referer-16223de7-12c0-49f3-8d87-e5f1e6a0eb3b/',
+		'https://eth1.lava.build/lava-referer-67d3f842-d21f-489d-b4f2-cf902ea4b1e5/',
 		'https://api.tatum.io/v3/blockchain/node/ethereum-mainnet',
 		'https://gateway.subquery.network/rpc/eth',
 		'https://ethereum.rpc.subquery.network/public',
 		'https://eth.llamarpc.com',
-		"https://1.rpc.thirdweb.com",
+		'https://1.rpc.thirdweb.com',
 	]);
 });

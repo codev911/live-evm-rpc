@@ -65,8 +65,9 @@ test('get all public rpc from chain', async () => {
 		'https://eth1.lava.build/lava-referer-16223de7-12c0-49f3-8d87-e5f1e6a0eb3b/',
 		'https://eth1.lava.build/lava-referer-67d3f842-d21f-489d-b4f2-cf902ea4b1e5/',
 		'https://api.tatum.io/v3/blockchain/node/ethereum-mainnet',
-		'https://gateway.subquery.network/rpc/eth',
+		'https://eth.nownodes.io',
 		'https://ethereum.rpc.subquery.network/public',
+		'https://rpc.graffiti.farm',
 		'https://eth.llamarpc.com',
 		'https://1.rpc.thirdweb.com',
 	]);

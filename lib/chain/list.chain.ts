@@ -5186,6 +5186,15 @@ export const chainList: chain[] = [
 		urls: ['https://x1-fastnet.xen.network', 'https://4003.rpc.thirdweb.com'],
 	},
 	{
+		chainId: 4040,
+		name: 'Carbonium Testnet Network',
+		urls: [
+			'https://rpc-dev.carbonium.network/',
+			'https://server-testnet.carbonium.network',
+			'https://4040.rpc.thirdweb.com',
+		],
+	},
+	{
 		chainId: 4048,
 		name: 'GAN Testnet',
 		urls: ['https://rpc.gpu.net', 'https://4048.rpc.thirdweb.com'],
@@ -8897,6 +8906,9 @@ export const chainList: chain[] = [
 			'https://polygon-bor-amoy-rpc.publicnode.com',
 			'https://polygon-amoy.blockpi.network/v1/rpc/public',
 			'https://80002.rpc.thirdweb.com',
+			'https://rpc.ankr.com/polygon_amoy',
+			'https://polygon-amoy.drpc.org',
+			'https://api.tatum.io/v3/blockchain/node/polygon-amoy',
 		],
 	},
 	{
@@ -9115,6 +9127,11 @@ export const chainList: chain[] = [
 			'https://node.greenchain.app/rpc/',
 			'https://97531.rpc.thirdweb.com',
 		],
+	},
+	{
+		chainId: 98881,
+		name: 'Ebi Chain',
+		urls: ['https://rpc.ebi.xyz', 'https://98881.rpc.thirdweb.com'],
 	},
 	{
 		chainId: 99099,

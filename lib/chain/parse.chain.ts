@@ -3,6 +3,7 @@ import * as path from 'path';
 import axios from 'axios';
 import { fileURLToPath } from 'url';
 import { chain } from 'lib/interface/chain.interface';
+import { extraRpc } from './extraRpc.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -98,6 +99,16 @@ async function main() {
 		chainListDart[index3].urls.push(
 			`https://${chainListDart[index3].chainId}.rpc.thirdweb.com`
 		);
+	}
+
+	for (let index = 0; index < extraRpc.length; index++) {
+		for (let index3 = 0; index3 < chainListDart.length; index3++) {
+			if (chainListDart[index3].chainId === extraRpc[index].chainId) {
+				extraRpc[index].urls.forEach(url => {
+					chainListDart[index3].urls.push(url);
+				});
+			}
+		}
 	}
 
 	if (fs.existsSync(path.join(__dirname, 'list.chain.ts')) === false) {

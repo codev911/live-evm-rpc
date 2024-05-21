@@ -90,7 +90,7 @@ const getIsSyncingPost = async (
 
 export const listSupportedChainId = (): number[] => {
 	return chainList.map(a => a.chainId);
-}
+};
 
 export const getPublicRpc = (chainId: number): string[] => {
 	try {

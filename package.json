@@ -15,7 +15,7 @@
     "format": "prettier --write lib/*.ts lib/**/*.ts tests/*.ts",
     "test": "jest",
     "generate:chain": "node --loader ts-node/esm ./lib/chain/fork.chain.ts && node --loader ts-node/esm ./lib/chain/parse.chain.ts && npm run format",
-    "release": "build && publish"
+    "release": "npm run build && npm publish"
   },
   "devDependencies": {
     "@swc/core": "^1.3.105",

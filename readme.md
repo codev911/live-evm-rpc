@@ -168,3 +168,19 @@ Get Public Live EVM RPC url easily.
     // if no live rpc detected, result will be like
     // []
 ```
+
+### E. listSupportedChainId
+```JavaScript
+    import { listSupportedChainId } from 'live-evm-rpc';
+    // if use commonjs use this :
+    // const { listSupportedChainId } = require('live-evm-rpc');
+
+    // example function for test
+    async function test(){
+        console.log(listSupportedChainId());
+    }
+    test();
+
+    // result will be like
+    // [1, 2, 5, 7, 8 ....]
+```

@@ -629,7 +629,6 @@ export const chainList: chain[] = [
 			'https://rpc.syscoin.org',
 			'https://rpc.ankr.com/syscoin',
 			'https://syscoin-evm.publicnode.com',
-			'https://rpc.pollum.services',
 			'https://57.rpc.thirdweb.com',
 		],
 	},
@@ -1274,6 +1273,7 @@ export const chainList: chain[] = [
 		name: 'HashKey Chain Testnet',
 		urls: [
 			'https://hashkeychain-testnet.alt.technology',
+			'https://hashkeychain-testnet.alt.technology',
 			'https://133.rpc.thirdweb.com',
 		],
 	},
@@ -1501,6 +1501,11 @@ export const chainList: chain[] = [
 			'https://http-testnet.hoosmartchain.com',
 			'https://170.rpc.thirdweb.com',
 		],
+	},
+	{
+		chainId: 171,
+		name: 'CO2e Ledger',
+		urls: ['https://rpc.co2ledger.xyz', 'https://171.rpc.thirdweb.com'],
 	},
 	{
 		chainId: 172,
@@ -1893,7 +1898,9 @@ export const chainList: chain[] = [
 		chainId: 254,
 		name: 'Swan Chain Mainnet',
 		urls: [
-			'https://mainnet-rpc01.swanchain.io',
+			'https://mainnet-rpc.swanchain.org',
+			'https://mainnet-rpc-01.swanchain.org',
+			'https://mainnet-rpc-02.swanchain.org',
 			'https://254.rpc.thirdweb.com',
 		],
 	},
@@ -1904,6 +1911,7 @@ export const chainList: chain[] = [
 			'https://api.kroma.network',
 			'https://rpc-kroma.rockx.com',
 			'https://1rpc.io/kroma',
+			'https://kroma.drpc.org',
 			'https://255.rpc.thirdweb.com',
 		],
 	},
@@ -2575,7 +2583,6 @@ export const chainList: chain[] = [
 			'https://rollux.rpc.syscoin.org',
 			'https://rpc.rollux.com',
 			'https://rollux.rpc.syscoin.org',
-			'https://rollux.pollum.services',
 			'https://570.rpc.thirdweb.com',
 		],
 	},
@@ -2793,6 +2800,14 @@ export const chainList: chain[] = [
 			'https://highbury.furya.io',
 			'https://rest.furya.io',
 			'https://710.rpc.thirdweb.com',
+		],
+	},
+	{
+		chainId: 712,
+		name: 'Birdee-2',
+		urls: [
+			'https://evm-rpc.birdee-2.tucana.zone',
+			'https://712.rpc.thirdweb.com',
 		],
 	},
 	{
@@ -3190,6 +3205,11 @@ export const chainList: chain[] = [
 		urls: ['https://ascraeus-rpc.oortech.com', 'https://972.rpc.thirdweb.com'],
 	},
 	{
+		chainId: 973,
+		name: 'Palm Smart Chain',
+		urls: ['https://rpc.palmsmartchain.io', 'https://973.rpc.thirdweb.com'],
+	},
+	{
 		chainId: 977,
 		name: 'Nepal Blockchain Network',
 		urls: [
@@ -3273,7 +3293,7 @@ export const chainList: chain[] = [
 			'https://public-en.kairos.node.kaia.io',
 			'https://klaytn-baobab.g.allthatnode.com/full/evm',
 			'https://rpc.ankr.com/klaytn_testnet',
-			'https://klaytn-baobab.blockpi.network/v1/rpc/public',
+			'https://kaia-kairos.blockpi.network/v1/rpc/public',
 			'https://klaytn.api.onfinality.io/public',
 			'https://1001.rpc.thirdweb.com',
 		],
@@ -3476,7 +3496,12 @@ export const chainList: chain[] = [
 	{
 		chainId: 1111,
 		name: 'WEMIX3.0 Mainnet',
-		urls: ['https://api.wemix.com', 'https://1111.rpc.thirdweb.com'],
+		urls: [
+			'https://api.wemix.com',
+			'https://api.wemix.com',
+			'https://wemix.drpc.org',
+			'https://1111.rpc.thirdweb.com',
+		],
 	},
 	{
 		chainId: 1112,
@@ -3691,6 +3716,14 @@ export const chainList: chain[] = [
 		urls: [
 			'https://testnet-chain.btcprotocol.io/',
 			'https://1227.rpc.thirdweb.com',
+		],
+	},
+	{
+		chainId: 1228,
+		name: 'Cycle Network Testnet Cuttlefish',
+		urls: [
+			'https://cuttlefish-rpc-testnet.cyclenetwork.io',
+			'https://1228.rpc.thirdweb.com',
 		],
 	},
 	{
@@ -4080,6 +4113,11 @@ export const chainList: chain[] = [
 		],
 	},
 	{
+		chainId: 1513,
+		name: 'Story Testnet',
+		urls: ['https://testnet.storyrpc.io', 'https://1513.rpc.thirdweb.com'],
+	},
+	{
 		chainId: 1515,
 		name: 'Beagle Messaging Chain',
 		urls: [
@@ -4224,7 +4262,12 @@ export const chainList: chain[] = [
 	{
 		chainId: 1750,
 		name: 'Metal L2',
-		urls: ['https://rpc.metall2.com', 'https://1750.rpc.thirdweb.com'],
+		urls: [
+			'https://rpc.metall2.com',
+			'https://rpc.metall2.com',
+			'https://metall2.drpc.org',
+			'https://1750.rpc.thirdweb.com',
+		],
 	},
 	{
 		chainId: 1773,
@@ -4290,6 +4333,14 @@ export const chainList: chain[] = [
 			'https://mainnet-data.rubychain.io/',
 			'https://mainnet.rubychain.io/',
 			'https://1821.rpc.thirdweb.com',
+		],
+	},
+	{
+		chainId: 1853,
+		name: 'HighOctane Subnet',
+		urls: [
+			'https://subnets.avax.network/highoctane/mainnet/rpc',
+			'https://1853.rpc.thirdweb.com',
 		],
 	},
 	{
@@ -4382,6 +4433,15 @@ export const chainList: chain[] = [
 		chainId: 1945,
 		name: 'ONUS Chain Testnet',
 		urls: ['https://rpc-testnet.onuschain.io', 'https://1945.rpc.thirdweb.com'],
+	},
+	{
+		chainId: 1946,
+		name: 'Minato',
+		urls: [
+			'https://rpc.minato.soneium.org',
+			'https://rpc.minato.soneium.org/',
+			'https://1946.rpc.thirdweb.com',
+		],
 	},
 	{
 		chainId: 1951,
@@ -5089,6 +5149,11 @@ export const chainList: chain[] = [
 		],
 	},
 	{
+		chainId: 2477,
+		name: '6Degree of Outreach',
+		urls: ['https://rpc.6do.world', 'https://2477.rpc.thirdweb.com'],
+	},
+	{
 		chainId: 2484,
 		name: 'Unicorn Ultra Nebulas Testnet',
 		urls: [
@@ -5678,8 +5743,8 @@ export const chainList: chain[] = [
 	},
 	{
 		chainId: 4080,
-		name: 'Tobe Chain',
-		urls: ['https://rpc.tobescan.com', 'https://4080.rpc.thirdweb.com'],
+		name: 'Tobe Chain Testnet',
+		urls: ['https://rpc-testnet.tobescan.com', 'https://4080.rpc.thirdweb.com'],
 	},
 	{
 		chainId: 4090,
@@ -5789,6 +5854,14 @@ export const chainList: chain[] = [
 			'https://chain.nexiv2.nexilix.com',
 			'https://rpc.chainv1.nexi.technology',
 			'https://4243.rpc.thirdweb.com',
+		],
+	},
+	{
+		chainId: 4269,
+		name: 'Laika Testnet',
+		urls: [
+			'https://testnetrpc1.laikachain.dog',
+			'https://4269.rpc.thirdweb.com',
 		],
 	},
 	{
@@ -6233,7 +6306,6 @@ export const chainList: chain[] = [
 			'https://rpc.tanenbaum.io',
 			'https://syscoin-tanenbaum-evm.publicnode.com',
 			'https://syscoin-tanenbaum-evm.publicnode.com',
-			'https://rpc-testnet.pollum.services',
 			'https://5700.rpc.thirdweb.com',
 		],
 	},
@@ -6502,6 +6574,14 @@ export const chainList: chain[] = [
 		urls: ['https://rpc.poolsmobility.com', 'https://6868.rpc.thirdweb.com'],
 	},
 	{
+		chainId: 6942,
+		name: 'Laika Mainnet',
+		urls: [
+			'https://mainnetrpc.laikachain.dog',
+			'https://6942.rpc.thirdweb.com',
+		],
+	},
+	{
 		chainId: 6969,
 		name: 'Tomb Chain Mainnet',
 		urls: ['https://rpc.tombchain.com/', 'https://6969.rpc.thirdweb.com'],
@@ -6592,6 +6672,14 @@ export const chainList: chain[] = [
 			'https://connect.bit-rock.io',
 			'https://brockrpc.io',
 			'https://7171.rpc.thirdweb.com',
+		],
+	},
+	{
+		chainId: 7210,
+		name: 'Nibiru Testnet-1',
+		urls: [
+			'https://evm-rpc.testnet-1.nibiru.fi',
+			'https://7210.rpc.thirdweb.com',
 		],
 	},
 	{
@@ -6957,7 +7045,7 @@ export const chainList: chain[] = [
 			'https://public-en-cypress.klaytn.net',
 			'https://klaytn-mainnet.g.allthatnode.com/full/evm',
 			'https://rpc.ankr.com/klaytn ',
-			'https://klaytn.blockpi.network/v1/rpc/public',
+			'https://kaia.blockpi.network/v1/rpc/public',
 			'https://klaytn.api.onfinality.io/public',
 			'https://1rpc.io/klay',
 			'https://klaytn-pokt.nodies.app',
@@ -7557,6 +7645,15 @@ export const chainList: chain[] = [
 		chainId: 9911,
 		name: 'Espento Mainnet',
 		urls: ['https://rpc.escscan.com/', 'https://9911.rpc.thirdweb.com'],
+	},
+	{
+		chainId: 9966,
+		name: 'UXER TESTNET NETWORK',
+		urls: [
+			'https://dev-testnet.uxer.network',
+			'https://data-cloud-testnet.uxer.network',
+			'https://9966.rpc.thirdweb.com',
+		],
 	},
 	{
 		chainId: 9977,
@@ -8546,6 +8643,11 @@ export const chainList: chain[] = [
 		],
 	},
 	{
+		chainId: 21363,
+		name: 'Lestnet',
+		urls: ['https://service.lestnet.org', 'https://21363.rpc.thirdweb.com'],
+	},
+	{
 		chainId: 21816,
 		name: 'omChain Mainnet',
 		urls: [
@@ -8977,7 +9079,7 @@ export const chainList: chain[] = [
 	},
 	{
 		chainId: 33469,
-		name: 'Zilliqa-2 EVM Devnet',
+		name: 'Zilliqa 2 EVM devnet',
 		urls: [
 			'https://api.zq2-devnet.zilliqa.com',
 			'https://33469.rpc.thirdweb.com',
@@ -9076,10 +9178,17 @@ export const chainList: chain[] = [
 		],
 	},
 	{
+		chainId: 40000,
+		name: 'DIV Chain',
+		urls: ['https://rpc.divchain.org', 'https://40000.rpc.thirdweb.com'],
+	},
+	{
 		chainId: 41455,
 		name: 'Aleph Zero EVM',
 		urls: [
 			'https://rpc.alephzero.raas.gelato.cloud',
+			'https://rpc.alephzero.raas.gelato.cloud',
+			'https://alephzero.drpc.org',
 			'https://41455.rpc.thirdweb.com',
 		],
 	},
@@ -9442,6 +9551,11 @@ export const chainList: chain[] = [
 		urls: ['https://testnet.gton.network/', 'https://50021.rpc.thirdweb.com'],
 	},
 	{
+		chainId: 50888,
+		name: 'Erbie Mainnet',
+		urls: ['https://api.erbie.io', 'https://50888.rpc.thirdweb.com'],
+	},
+	{
 		chainId: 51178,
 		name: 'Lumoz Testnet Alpha',
 		urls: [
@@ -9492,12 +9606,25 @@ export const chainList: chain[] = [
 		],
 	},
 	{
+		chainId: 54176,
+		name: 'OverProtocol Mainnet',
+		urls: [
+			'https://public.rpc.overprotocol.com',
+			'https://54176.rpc.thirdweb.com',
+		],
+	},
+	{
 		chainId: 54211,
 		name: 'Haqq Chain Testnet',
 		urls: [
 			'https://rpc.eth.testedge2.haqq.network',
 			'https://54211.rpc.thirdweb.com',
 		],
+	},
+	{
+		chainId: 54321,
+		name: 'Toronet Testnet',
+		urls: ['https://testnet.toronet.org/rpc', 'https://54321.rpc.thirdweb.com'],
 	},
 	{
 		chainId: 55004,
@@ -9583,7 +9710,6 @@ export const chainList: chain[] = [
 			'https://rpc-tanenbaum.rollux.com',
 			'https://rpc.ankr.com/rollux_testnet/',
 			'https://rollux.rpc.tanenbaum.io',
-			'https://rollux.rpc-testnet.pollum.services',
 			'https://57000.rpc.thirdweb.com',
 		],
 	},
@@ -9602,6 +9728,11 @@ export const chainList: chain[] = [
 			'https://sepolia.publicgoods.network',
 			'https://58008.rpc.thirdweb.com',
 		],
+	},
+	{
+		chainId: 58680,
+		name: 'Lumoz Quidditch Testnet',
+		urls: ['https://quidditch-rpc.lumoz.org', 'https://58680.rpc.thirdweb.com'],
 	},
 	{
 		chainId: 59140,
@@ -9677,6 +9808,7 @@ export const chainList: chain[] = [
 			'https://rpc.gobob.xyz',
 			'https://bob-mainnet.public.blastapi.io',
 			'https://rpc.gobob.xyz',
+			'https://bob.drpc.org',
 			'https://60808.rpc.thirdweb.com',
 		],
 	},
@@ -9789,11 +9921,6 @@ export const chainList: chain[] = [
 			'https://rpc.ecredits.com',
 			'https://63000.rpc.thirdweb.com',
 		],
-	},
-	{
-		chainId: 63001,
-		name: 'eCredits Testnet',
-		urls: ['https://rpc.tst.ecredits.com', 'https://63001.rpc.thirdweb.com'],
 	},
 	{
 		chainId: 65349,
@@ -10534,6 +10661,14 @@ export const chainList: chain[] = [
 		],
 	},
 	{
+		chainId: 102032,
+		name: 'Creditcoin Devnet',
+		urls: [
+			'https://rpc.cc3-devnet.creditcoin.network',
+			'https://102032.rpc.thirdweb.com',
+		],
+	},
+	{
 		chainId: 103090,
 		name: 'Crystaleum',
 		urls: [
@@ -10825,6 +10960,16 @@ export const chainList: chain[] = [
 		],
 	},
 	{
+		chainId: 168168,
+		name: 'Zchains',
+		urls: ['https://rpc.zchains.com', 'https://168168.rpc.thirdweb.com'],
+	},
+	{
+		chainId: 171000,
+		name: 'Fair Testnet',
+		urls: ['https://rpc-testnet.xfair.ai', 'https://171000.rpc.thirdweb.com'],
+	},
+	{
 		chainId: 175177,
 		name: 'Chronicle - Lit Protocol Testnet',
 		urls: [
@@ -10955,6 +11100,15 @@ export const chainList: chain[] = [
 		],
 	},
 	{
+		chainId: 202105,
+		name: 'DuckChain Testnet',
+		urls: [
+			'https://testnet-rpc.duckchain.io',
+			'https://testnet-rpc-hk.duckchain.io',
+			'https://202105.rpc.thirdweb.com',
+		],
+	},
+	{
 		chainId: 202212,
 		name: 'X1 Devnet',
 		urls: ['https://x1-devnet.xen.network', 'https://202212.rpc.thirdweb.com'],
@@ -10988,6 +11142,15 @@ export const chainList: chain[] = [
 		urls: [
 			'https://openapi2.platon.network/rpc',
 			'https://210425.rpc.thirdweb.com',
+		],
+	},
+	{
+		chainId: 212013,
+		name: 'Litentry',
+		urls: [
+			'https://rpc.litentry-parachain.litentry.io',
+			'https://litentry-rpc.dwellir.com',
+			'https://212013.rpc.thirdweb.com',
 		],
 	},
 	{
@@ -11553,6 +11716,14 @@ export const chainList: chain[] = [
 		urls: [
 			'https://mainnet-rpc.bescscan.io',
 			'https://535037.rpc.thirdweb.com',
+		],
+	},
+	{
+		chainId: 541764,
+		name: 'OverProtocol Testnet',
+		urls: [
+			'https://wallet-dolphin.rpc.over.network',
+			'https://541764.rpc.thirdweb.com',
 		],
 	},
 	{
@@ -12302,6 +12473,14 @@ export const chainList: chain[] = [
 		],
 	},
 	{
+		chainId: 9999999,
+		name: 'Fluence',
+		urls: [
+			'https://rpc.mainnet.fluence.dev/',
+			'https://9999999.rpc.thirdweb.com',
+		],
+	},
+	{
 		chainId: 10067275,
 		name: 'Plian Testnet Subchain 1',
 		urls: [
@@ -12405,7 +12584,7 @@ export const chainList: chain[] = [
 	},
 	{
 		chainId: 12227332,
-		name: 'NeoX Testnet T4',
+		name: 'Neo X Testnet T4',
 		urls: [
 			'https://testnet.rpc.banelabs.org/',
 			'https://12227332.rpc.thirdweb.com',
@@ -12601,6 +12780,14 @@ export const chainList: chain[] = [
 		],
 	},
 	{
+		chainId: 33626250,
+		name: 'Toliman Suave Testnet',
+		urls: [
+			'https://rpc.toliman.suave.flashbots.net',
+			'https://33626250.rpc.thirdweb.com',
+		],
+	},
+	{
 		chainId: 35855456,
 		name: 'Joys Digital Mainnet',
 		urls: [
@@ -12623,6 +12810,14 @@ export const chainList: chain[] = [
 		urls: [
 			'https://kingdomchain.observer/rpc',
 			'https://39916801.rpc.thirdweb.com',
+		],
+	},
+	{
+		chainId: 52164803,
+		name: 'Fluence Testnet',
+		urls: [
+			'https://rpc.testnet.fluence.dev/',
+			'https://52164803.rpc.thirdweb.com',
 		],
 	},
 	{
@@ -12885,7 +13080,7 @@ export const chainList: chain[] = [
 		chainId: 531050104,
 		name: 'Sophon Testnet',
 		urls: [
-			'https://rpc.testnet.sophon.xyz/',
+			'https://rpc.testnet.sophon.xyz',
 			'https://531050104.rpc.thirdweb.com',
 		],
 	},
@@ -12893,6 +13088,15 @@ export const chainList: chain[] = [
 		chainId: 666666666,
 		name: 'Degen Chain',
 		urls: ['https://rpc.degen.tips', 'https://666666666.rpc.thirdweb.com'],
+	},
+	{
+		chainId: 728126428,
+		name: 'Tron Mainnet',
+		urls: [
+			'https://rpc.ankr.com/tron_jsonrpc',
+			'https://api.trongrid.io/jsonrpc',
+			'https://728126428.rpc.thirdweb.com',
+		],
 	},
 	{
 		chainId: 888888888,
@@ -13235,6 +13439,14 @@ export const chainList: chain[] = [
 			'https://londonpublic.alphabetnetwork.org',
 			'https://main-rpc.com',
 			'https://111222333444.rpc.thirdweb.com',
+		],
+	},
+	{
+		chainId: 111551119090,
+		name: 'Thanos Sepolia',
+		urls: [
+			'https://rpc.thanos-sepolia.tokamak.network',
+			'https://111551119090.rpc.thirdweb.com',
 		],
 	},
 	{

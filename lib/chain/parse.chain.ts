@@ -141,7 +141,7 @@ async function main() {
 			chainData.chainId,
 			'approved',
 			totalAccepted,
-			'rpcs and ',
+			'rpcs and rejected',
 			totalRejected,
 			'rpcs'
 		);

@@ -33,6 +33,11 @@ jobs:
     - name: Build the project
       run: npm run build
 
+    # Testung the project
+    - name: Testing the project
+      run: npm run test
+
+
     # Publish to npm
     - name: Publish to npm
       run: npm publish

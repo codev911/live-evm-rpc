@@ -111,54 +111,54 @@ async function main() {
 		}
 	}
 
-	const filteredChain: chain[] = [];
+	// const filteredChain: chain[] = [];
 
-	for (let chainData of chainListDart) {
-		console.log('filtering chain id:', chainData.chainId);
+	// for (let chainData of chainListDart) {
+	// 	console.log('filtering chain id:', chainData.chainId);
 
-		const urls: string[] = [];
-		const aggregateTest: any[] = [];
-		let totalAccepted: number = 0;
-		let totalRejected: number = 0;
+	// 	const urls: string[] = [];
+	// 	const aggregateTest: any[] = [];
+	// 	let totalAccepted: number = 0;
+	// 	let totalRejected: number = 0;
 
-		for (let url of chainData.urls) {
-			aggregateTest.push(tryRpc(url));
-		}
+	// 	for (let url of chainData.urls) {
+	// 		aggregateTest.push(tryRpc(url));
+	// 	}
 
-		const check = await Promise.allSettled(aggregateTest);
+	// 	const check = await Promise.allSettled(aggregateTest);
 
-		for (let index = 0; index < chainData.urls.length; index++) {
-			if (check[index].status === 'fulfilled') {
-				urls.push(chainData.urls[index]);
-				totalAccepted += 1;
-			} else {
-				totalRejected += 1;
-			}
-		}
+	// 	for (let index = 0; index < chainData.urls.length; index++) {
+	// 		if (check[index].status === 'fulfilled') {
+	// 			urls.push(chainData.urls[index]);
+	// 			totalAccepted += 1;
+	// 		} else {
+	// 			totalRejected += 1;
+	// 		}
+	// 	}
 
-		console.log(
-			'chain id:',
-			chainData.chainId,
-			'approved',
-			totalAccepted,
-			'rpcs and rejected',
-			totalRejected,
-			'rpcs'
-		);
-		if (urls.length > 0) {
-			filteredChain.push({
-				chainId: chainData.chainId,
-				name: chainData.name,
-				urls: urls,
-			});
-		}
-	}
+	// 	console.log(
+	// 		'chain id:',
+	// 		chainData.chainId,
+	// 		'approved',
+	// 		totalAccepted,
+	// 		'rpcs and rejected',
+	// 		totalRejected,
+	// 		'rpcs'
+	// 	);
+	// 	if (urls.length > 0) {
+	// 		filteredChain.push({
+	// 			chainId: chainData.chainId,
+	// 			name: chainData.name,
+	// 			urls: urls,
+	// 		});
+	// 	}
+	// }
 
 	if (fs.existsSync(path.join(__dirname, 'list.chain.ts')) === false) {
 		fs.appendFileSync(
 			path.join(__dirname, 'list.chain.ts'),
 			'import { chain } from "lib/interface/chain.interface";\r\nexport const chainList: chain[] = ' +
-				JSON.stringify(filteredChain) +
+				JSON.stringify(chainListDart) +
 				';'
 		);
 	}

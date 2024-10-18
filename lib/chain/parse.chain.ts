@@ -39,7 +39,9 @@ async function main() {
 				rpc.includes('${INFURA_API_KEY}') === false &&
 				rpc.includes('${API_KEY}') === false &&
 				rpc.includes('${ALCHEMY_API_KEY}') === false &&
-				rpc.includes('api_key') === false
+				rpc.includes('api_key') === false &&
+				rpc.includes('blxrbdn.com') === false &&
+				rpc.includes('linkpool.io') === false
 			) {
 				if (rpc.includes('${ANKR_API_KEY}') === true) {
 					const finalRpc = rpc.replace('${ANKR_API_KEY}', '');
@@ -64,11 +66,26 @@ async function main() {
 			for (let index3 = 0; index3 < chainListDart.length; index3++) {
 				if (chainListDart[index3].chainId === chainIdList[index]) {
 					aggregate[1][chainIdList[index]]['rpcs'].forEach(dat => {
-						if (typeof dat !== 'object' && dat.includes('https://') === true)
+						if (
+							typeof dat !== 'object' &&
+							dat.includes('https://') === true &&
+							dat.includes('${INFURA_API_KEY}') === false &&
+							dat.includes('${API_KEY}') === false &&
+							dat.includes('${ALCHEMY_API_KEY}') === false &&
+							dat.includes('api_key') === false &&
+							dat.includes('blxrbdn.com') === false &&
+							dat.includes('linkpool.io') === false
+						)
 							chainListDart[index3].urls.push(dat);
 						if (
 							typeof dat === 'object' &&
-							dat.url.includes('https://') === true
+							dat.url.includes('https://') === true &&
+							dat.url.includes('${INFURA_API_KEY}') === false &&
+							dat.url.includes('${API_KEY}') === false &&
+							dat.url.includes('${ALCHEMY_API_KEY}') === false &&
+							dat.url.includes('api_key') === false &&
+							dat.url.includes('blxrbdn.com') === false &&
+							dat.url.includes('linkpool.io') === false
 						)
 							chainListDart[index3].urls.push(dat.url);
 					});
@@ -82,11 +99,26 @@ async function main() {
 			for (let index3 = 0; index3 < chainListDart.length; index3++) {
 				if (chainListDart[index3].chainId === chainIdList[index]) {
 					aggregate[2][chainIdList[index]]['rpcs'].forEach(dat => {
-						if (typeof dat !== 'object' && dat.includes('https://') === true)
+						if (
+							typeof dat !== 'object' &&
+							dat.includes('https://') === true &&
+							dat.includes('${INFURA_API_KEY}') === false &&
+							dat.includes('${API_KEY}') === false &&
+							dat.includes('${ALCHEMY_API_KEY}') === false &&
+							dat.includes('api_key') === false &&
+							dat.includes('blxrbdn.com') === false &&
+							dat.includes('linkpool.io') === false
+						)
 							chainListDart[index3].urls.push(dat);
 						if (
 							typeof dat === 'object' &&
-							dat.url.includes('https://') === true
+							dat.url.includes('https://') === true &&
+							dat.url.includes('${INFURA_API_KEY}') === false &&
+							dat.url.includes('${API_KEY}') === false &&
+							dat.url.includes('${ALCHEMY_API_KEY}') === false &&
+							dat.url.includes('api_key') === false &&
+							dat.url.includes('blxrbdn.com') === false &&
+							dat.url.includes('linkpool.io') === false
 						)
 							chainListDart[index3].urls.push(dat.url);
 					});

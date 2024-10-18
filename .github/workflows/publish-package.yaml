@@ -1,44 +1,39 @@
-name: Publish npm Package
+name: Publish to npm
 
 on:
-  push:
-    tags:
-      - 'v*.*.*'
+  release:
+    types: [published]
 
 jobs:
-  build-and-publish:
+  publish:
     runs-on: ubuntu-latest
-
     steps:
-    # Checkout the repository
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '22' # specify node version 22
+          registry-url: 'https://registry.npmjs.org/'
 
-    # Set up Node.js environment
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '22'  # Use the appropriate Node.js version
-        cache: 'npm'  # Cache node_modules
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install
 
-    # Install dependencies
-    - name: Install dependencies
-      run: npm install
+      # Generate chainlist data
+      - name: Generate list chain data
+        run: npm run generate:chain
 
-    # Generate chainlist data
-    - name: Generate list chain data
-      run: npm run generate:chain
+      # Build the project
+      - name: Build the project
+        run: npm run build
 
-    # Build the project
-    - name: Build the project
-      run: npm run build
+      # Testung the project
+      - name: Testing the project
+        run: npm run test
 
-    # Testung the project
-    - name: Testing the project
-      run: npm run test
-
-    # Publish to npm
-    - name: Publish to npm
-      run: npm publish
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}  # Use the secret you added earlier
+      - name: Publish package
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish

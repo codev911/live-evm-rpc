@@ -37,7 +37,6 @@ jobs:
     - name: Testing the project
       run: npm run test
 
-
     # Publish to npm
     - name: Publish to npm
       run: npm publish

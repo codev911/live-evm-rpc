@@ -1,0 +1,40 @@
+name: Publish npm Package
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checkout the repository
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Set up Node.js environment
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '22'  # Use the appropriate Node.js version
+        cache: 'npm'  # Cache node_modules
+
+    # Install dependencies
+    - name: Install dependencies
+      run: npm install
+
+    # Generate chainlist data
+    - name: Generate list chain data
+      run: npm run generate:chain
+
+    # Build the project
+    - name: Build the project
+      run: npm run build
+
+    # Publish to npm
+    - name: Publish to npm
+      run: npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}  # Use the secret you added earlier

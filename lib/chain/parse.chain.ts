@@ -220,6 +220,7 @@ async function tryRpc(url: string) {
 			{
 				timeout: 5000,
 				httpAgent: agent,
+				httpsAgent: agent,
 			}
 		);
 

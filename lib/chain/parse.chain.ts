@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import axios from 'axios';
+import https from 'https';
 import { fileURLToPath } from 'url';
 import { chain } from 'lib/interface/chain.interface';
 import { extraRpc } from './extraRpc.js';
@@ -210,11 +211,15 @@ async function main() {
 
 async function tryRpc(url: string) {
 	try {
+		const agent = new https.Agent({
+			rejectUnauthorized: true, // Will reject invalid certificates
+		});
 		const { status, data } = await axios.post(
 			url,
 			{ jsonrpc: '2.0', method: 'eth_syncing', params: [], id: 83 },
 			{
 				timeout: 5000,
+				httpAgent: agent,
 			}
 		);
 

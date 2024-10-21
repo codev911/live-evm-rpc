@@ -219,7 +219,6 @@ async function tryRpc(url: string) {
 			{ jsonrpc: '2.0', method: 'eth_syncing', params: [], id: 83 },
 			{
 				timeout: 5000,
-				httpAgent: agent,
 				httpsAgent: agent,
 			}
 		);

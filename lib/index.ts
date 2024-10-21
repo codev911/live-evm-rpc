@@ -1,10 +1,14 @@
 import axios from 'axios';
+import https from 'https';
 
 import { chainList } from './chain/list.chain';
 import { reportState } from './interface/report.interface';
 import { liveRpcOption } from './interface/liverpc.interface';
 
 const defaultTimeout: number = 1500;
+const agent = new https.Agent({
+	rejectUnauthorized: true,
+});
 
 export type ReportState = reportState;
 
@@ -17,6 +21,7 @@ const getChainPost = async (
 			rpcUrl,
 			{ jsonrpc: '2.0', method: 'eth_chainId', params: [], id: 83 },
 			{
+				httpsAgent: agent,
 				timeout:
 					timeout !== undefined && timeout !== null ? timeout : defaultTimeout,
 			}
@@ -41,6 +46,7 @@ const getBlockPost = async (
 			rpcUrl,
 			{ jsonrpc: '2.0', method: 'eth_blockNumber', params: [], id: 83 },
 			{
+				httpsAgent: agent,
 				timeout:
 					timeout !== undefined && timeout !== null ? timeout : defaultTimeout,
 			}
@@ -65,6 +71,7 @@ const getIsSyncingPost = async (
 			rpcUrl,
 			{ jsonrpc: '2.0', method: 'eth_syncing', params: [], id: 83 },
 			{
+				httpsAgent: agent,
 				timeout:
 					timeout !== undefined && timeout !== null ? timeout : defaultTimeout,
 			}

@@ -41,6 +41,7 @@ async function main() {
 				rpc.includes('${API_KEY}') === false &&
 				rpc.includes('${ALCHEMY_API_KEY}') === false &&
 				rpc.includes('api_key') === false &&
+				rpc.includes('ankr') === false &&
 				rpc.includes('blxrbdn.com') === false &&
 				rpc.includes('linkpool.io') === false
 			) {
@@ -74,6 +75,7 @@ async function main() {
 							dat.includes('${API_KEY}') === false &&
 							dat.includes('${ALCHEMY_API_KEY}') === false &&
 							dat.includes('api_key') === false &&
+							dat.includes('ankr') === false &&
 							dat.includes('blxrbdn.com') === false &&
 							dat.includes('linkpool.io') === false
 						)
@@ -85,6 +87,7 @@ async function main() {
 							dat.url.includes('${API_KEY}') === false &&
 							dat.url.includes('${ALCHEMY_API_KEY}') === false &&
 							dat.url.includes('api_key') === false &&
+							dat.url.includes('ankr') === false &&
 							dat.url.includes('blxrbdn.com') === false &&
 							dat.url.includes('linkpool.io') === false
 						)
@@ -107,6 +110,7 @@ async function main() {
 							dat.includes('${API_KEY}') === false &&
 							dat.includes('${ALCHEMY_API_KEY}') === false &&
 							dat.includes('api_key') === false &&
+							dat.includes('ankr') === false &&
 							dat.includes('blxrbdn.com') === false &&
 							dat.includes('linkpool.io') === false
 						)
@@ -118,6 +122,7 @@ async function main() {
 							dat.url.includes('${API_KEY}') === false &&
 							dat.url.includes('${ALCHEMY_API_KEY}') === false &&
 							dat.url.includes('api_key') === false &&
+							dat.url.includes('ankr') === false &&
 							dat.url.includes('blxrbdn.com') === false &&
 							dat.url.includes('linkpool.io') === false
 						)

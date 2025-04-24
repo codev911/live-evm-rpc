@@ -7,12 +7,11 @@ export const extraRpc = [
 	//         'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
 	//     ],
 	// }
-	{
-		chainId: 80002,
-		urls: [
-			'https://rpc.ankr.com/polygon_amoy',
-			'https://polygon-amoy.drpc.org',
-			'https://api.tatum.io/v3/blockchain/node/polygon-amoy',
-		],
-	},
+	// {
+	// 	chainId: 80002,
+	// 	urls: [
+	// 		'https://polygon-amoy.drpc.org',
+	// 		'https://api.tatum.io/v3/blockchain/node/polygon-amoy',
+	// 	],
+	// },
 ];
